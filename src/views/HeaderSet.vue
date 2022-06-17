@@ -116,8 +116,8 @@ methods : {
     },
     changeC() {
       if(this.showCart === 0) {
-        this.showFavorites = 0
         this.showCart = 1
+        this.showFavorites = 0
         this.showModal = 0
         this.showTown = 0
         this.showScales = 0
@@ -127,12 +127,12 @@ methods : {
     },
     changeM() {
       if(this.showModal === 0) {
+        this.showModal = 1
+        this.logIn = 1
         this.showFavorites = 0
         this.showCart = 0
-        this.showModal = 1
         this.showTown = 0
         this.showScales = 0
-        this.logIn = 1
         this.register = 0
       } else {
         this.showModal = 0
@@ -140,21 +140,21 @@ methods : {
     },
     changeS() {
       if(this.showScales === 0) {
+        this.showScales = 1
         this.showFavorites = 0
         this.showCart = 0
         this.showModal = 0
         this.showTown = 0
-        this.showScales = 1
       } else {
         this.showScales = 0
       }
     },
     changeT() {
       if(this.showTown === 0) {
+        this.showTown = 1
         this.showFavorites = 0
         this.showCart = 0
         this.showModal = 0
-        this.showTown = 1
         this.showScales = 0
       } else {
         this.showTown = 0
