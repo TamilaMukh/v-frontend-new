@@ -103,6 +103,17 @@ data() {
   }
 },
 methods : {
+    changeS() {
+      if(this.showScales === 0) {
+        this.showScales = 1
+        this.showFavorites = 0
+        this.showCart = 0
+        this.showModal = 0
+        this.showTown = 0
+      } else {
+        this.showScales = 0
+      }
+    },
    changeF() {
       if(this.showFavorites === 0) {
         this.showFavorites = 1
@@ -136,17 +147,6 @@ methods : {
         this.register = 0
       } else {
         this.showModal = 0
-      }
-    },
-    changeS() {
-      if(this.showScales === 0) {
-        this.showScales = 1
-        this.showFavorites = 0
-        this.showCart = 0
-        this.showModal = 0
-        this.showTown = 0
-      } else {
-        this.showScales = 0
       }
     },
     changeT() {
