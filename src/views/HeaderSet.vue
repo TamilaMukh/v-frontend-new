@@ -15,12 +15,14 @@
         </div>
         <p class="hover:text-prpl transition"><router-link to="/products">Catalogue<i class="fas fa-search ml-3 text-sm"></i></router-link></p>
         <p @click="changeM()" class="cursor-pointer hover:text-prpl transition">Log in</p>
-        <button class="text-xl hover:text-prpl transition"><i class="fas fa-balance-scale"></i></button>
+        <button @click="changeS()" class="text-xl hover:text-prpl transition"><i class="fas fa-balance-scale"></i></button>
+        <div v-if="showScales === 1" class="scndDrop w-trn p-2 bg-neutral-100 text-center rounded-lg"><p class="text-prpl font-semibold">Compare</p>
+          <p>...</p></div>
         <button @click="changeF()" class="text-xl hover:text-prpl transition"><i class="far fa-heart"></i></button>
-        <div v-if="showFavorites === 1" class="scndDrop w-trn p-2 bg-neutral-100 text-center rounded-lg"><p class="text-prpl font-semibold">favorites</p>
+        <div v-if="showFavorites === 1" class="thrdDrop w-trn p-2 bg-neutral-100 text-center rounded-lg"><p class="text-prpl font-semibold">Favorites</p>
           <p>...</p></div>
         <button @click="changeC()" class="text-xl hover:text-prpl transition"><i class="fas fa-shopping-cart"></i></button>
-        <div v-if="showCart === 1" class="thrdDrop w-trn p-2 bg-neutral-100 text-center rounded-lg"><p class="text-prpl font-semibold">cart</p>
+        <div v-if="showCart === 1" class="frthDrop w-trn p-2 bg-neutral-100 text-center rounded-lg"><p class="text-prpl font-semibold">Cart</p>
           <p>...</p></div>
       </div>
     </div>
@@ -107,6 +109,7 @@ methods : {
         this.showCart = 0
         this.showModal = 0
         this.showTown = 0
+        this.showScales = 0
       } else {
         this.showFavorites = 0
       }
@@ -117,6 +120,7 @@ methods : {
         this.showCart = 1
         this.showModal = 0
         this.showTown = 0
+        this.showScales = 0
       } else {
         this.showCart = 0
       }
@@ -127,10 +131,22 @@ methods : {
         this.showCart = 0
         this.showModal = 1
         this.showTown = 0
+        this.showScales = 0
         this.logIn = 1
         this.register = 0
       } else {
         this.showModal = 0
+      }
+    },
+    changeS() {
+      if(this.showScales === 0) {
+        this.showFavorites = 0
+        this.showCart = 0
+        this.showModal = 0
+        this.showTown = 0
+        this.showScales = 1
+      } else {
+        this.showScales = 0
       }
     },
     changeT() {
@@ -139,6 +155,7 @@ methods : {
         this.showCart = 0
         this.showModal = 0
         this.showTown = 1
+        this.showScales = 0
       } else {
         this.showTown = 0
       }

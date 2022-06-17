@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+body::-webkit-scrollbar {
+  width: 0.4rem;
+  background-color: #e5e5e5;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #5c14d0;
+  border-radius: 2px;
+}
 .shopname {
     font-family: 'Audiowide';
 }
@@ -20,16 +28,22 @@
 .frstDrop {
   position: absolute;
   top: 5.4rem;
-  left: 51%;
+  left: 43%;
   z-index: 1000;
 }
 .scndDrop {
   position: absolute;
   top: 5.4rem;
-  left: 81.5%;
+  left: 74%;
   z-index: 1000;
 }
 .thrdDrop {
+  position: absolute;
+  top: 5.4rem;
+  left: 81.7%;
+  z-index: 1000;
+}
+.frthDrop {
   position: absolute;
   top: 5.4rem;
   left: 89.5%;

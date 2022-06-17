@@ -12,7 +12,7 @@
       <div v-if="data">
         <div class="w-4/5 my-6 flex">
         <!-- <div class="w-1/3 bg-neutral-100 rounded-lg h-96"><p class="p-3">*тут типо картинка*</p></div> -->
-        <div class="bg-neutral-100 rounded-lg p-10"><img class="full" :src="'http://38.242.229.113:8055/assets/' + data.products_by_id.image.id" alt=""></div>
+        <div class="bg-neutral-100 rounded-lg p-10 border border-lghtprpl hover:border-lgprtwo transition"><img class="full" :src="'http://38.242.229.113:8055/assets/' + data.products_by_id.image.id" alt=""></div>
           <div class="w-1/3 mx-20 bg-neutral-100 rounded-lg p-3">
             <p class="font-semibold mb-6 border-b border-b-neutral-300">{{ data.products_by_id.title }}</p>
             <p class="text-prpl">Characteristic:</p>

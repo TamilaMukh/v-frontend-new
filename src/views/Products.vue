@@ -5,7 +5,7 @@
     <p class="lg:mr-20 text-prpl font-semibold">{{ searchString }}</p>
     <div class="w-full my-6 mx-auto lg:flex items-center">
       <input
-        class="lg:w-1/3 p-1 font-light border border-gray-400 rounded-lg mr-3"
+        class="lg:w-1/3 p-1 font-light border border-gray-400 rounded-lg mr-3 border border-prpl focus:outline-lghtprpl"
         type="text"
         placeholder="Search..."
         v-model="searchString"
@@ -13,7 +13,7 @@
       <i class="fas fa-search relative right-10"></i>
       <div class="flex items-center">
         <p class="mr-3">min</p> <input
-        class="p-1 font-light border border-gray-400 rounded-lg mr-3"
+        class="p-1 font-light border border-gray-400 rounded-lg mr-3 border border-prpl focus:outline-lghtprpl"
         type="text"
         placeholder="Min"
         v-model.number="min"
@@ -21,7 +21,7 @@
       </div>
       <div class="flex items-center">
         <p class="mr-3">max</p> <input
-        class="p-1 font-light border border-gray-400 rounded-lg mr-3"
+        class="p-1 font-light border border-gray-400 rounded-lg mr-3 border border-prpl focus:outline-lghtprpl"
         type="text"
         placeholder="Max"
         v-model.number="max"
